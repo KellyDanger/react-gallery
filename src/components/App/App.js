@@ -33,8 +33,7 @@ class App extends Component {
         </header>
         <br/>
         <GalleryList galleryArray={this.state.galleryArray}/>
-        
-        
+              
       </div>
     );
   }

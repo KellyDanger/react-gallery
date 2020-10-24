@@ -1,18 +1,18 @@
 import axios from 'axios';
 import React, {Component} from 'react';
+import GalleryItems from '../GalleryItems/GalleryItems';
 
 class GalleryList extends Component {
-
   render(){
     return(
-      <div id="gallery">
-        {this.props.galleryArray.map((pic) => {
-          return <img height="200px" width="200px" key={pic.id} src={pic.path} alt={pic.description}/>
-        })}
-      </div>
-      
+      <>
+      {this.props.galleryArray.map((pic) => {
+        return <GalleryItems pic={pic}/>
+      })}
+      </>
     )
   }
 }
+
 
 export default GalleryList;
