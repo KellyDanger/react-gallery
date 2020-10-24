@@ -3,12 +3,22 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  state = {
+    galleryArray: [],
+  }
+  componentDidMount = () => {
+    this.getGallery();
+  }
+
   getGallery = () => {
     axios({
       method: 'GET',
-      url: '/songs'
+      url: '/gallery'
     }).then((response) => {
       console.log('response from GET', response.data);
+      this.setState({
+        galleryArray: response.data
+      })
     }).catch((error) => {
       console.log('error in GET', error);  
     })
@@ -22,7 +32,10 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg" alt="goat"/>
+        {this.state.galleryArray.map((pic) => {
+          return <img height="200px" width="200px" src={pic.path} alt={pic.description}/>
+        })}
+        
       </div>
     );
   }
