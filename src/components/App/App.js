@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import './App.css';
+import GalleryList from '../GalleryList/GalleryList'
 
 class App extends Component {
   state = {
@@ -31,10 +32,8 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <p>Gallery goes here</p>
-        {this.state.galleryArray.map((pic) => {
-          return <img height="200px" width="200px" src={pic.path} alt={pic.description}/>
-        })}
+        <GalleryList galleryArray={this.state.galleryArray}/>
+        
         
       </div>
     );
