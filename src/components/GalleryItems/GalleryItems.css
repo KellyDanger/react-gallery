@@ -8,4 +8,11 @@ img {
   display:  inline-block;
   border: 2px aliceblue solid;
   margin: 15px;
+  height: 305px;
+  width: 230px;
+  vertical-align: top;
+}
+
+.descText {
+  margin-top: 100px;
 }

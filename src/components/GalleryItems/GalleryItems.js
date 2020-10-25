@@ -30,7 +30,7 @@ class GalleryItems extends Component {
       <>
       {this.state.showDesc ? 
       <div className="galleryContainer">
-         <p onClick={this.showDesc}>{this.props.pic.description}</p>
+         <p className="descText" onClick={this.showDesc}>{this.props.pic.description}</p>
       </div>
      
       :
