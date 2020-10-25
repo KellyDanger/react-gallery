@@ -32,7 +32,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <GalleryList galleryArray={this.state.galleryArray}/>
+        <GalleryList galleryArray={this.state.galleryArray} getGallery={this.getGallery}/>
               
       </div>
     );
