@@ -39,7 +39,6 @@ class GalleryItems extends Component {
         <br></br>
         <button className="likeBtn" onClick={this.like}>Like</button>
         <p>Likes: {this.props.pic.likes}</p>
-
       </div>
       }
       
