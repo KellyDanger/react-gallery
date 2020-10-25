@@ -29,8 +29,8 @@ class GalleryItems extends Component {
     return(
       <>
       {this.state.showDesc ? 
-      <div className="galleryContainer">
-         <p className="descText" onClick={this.showDesc}>{this.props.pic.description}</p>
+      <div className="galleryContainer" onClick={this.showDesc}>
+         <p className="descText" >{this.props.pic.description}</p>
       </div>
      
       :
