@@ -6,6 +6,6 @@ img {
 
 .galleryContainer {
   display:  inline-block;
-  border: 1px black solid;
+  border: 2px aliceblue solid;
   margin: 15px;
 }
