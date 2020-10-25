@@ -4,7 +4,6 @@ import axios from 'axios';
 class GalleryItems extends Component {
   state = {
     showDesc: false,
-    likeCounter: 0
   }
   showDesc = () => {
     console.log(this.state.showDesc); 
@@ -32,11 +31,14 @@ class GalleryItems extends Component {
       <p onClick={this.showDesc}>{this.props.pic.description}</p>
       :
       <div className="galleryContainer">
-        <img height="200px" width="200px"src={this.props.pic.path} alt={this.props.pic.description} onClick={this.showDesc}/>
+        <img src={this.props.pic.path} alt={this.props.pic.description} onClick={this.showDesc}/>
+        <br></br>
+        <button className="likeBtn" onClick={this.like}>Like</button>
         <p>Likes: {this.props.pic.likes}</p>
+
       </div>
       }
-      <button className="likeBtn" onClick={this.like}>Like</button>
+      
       </>
     )
   }
